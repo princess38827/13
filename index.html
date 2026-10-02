@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cluster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.55">
+            <line x1="16" y1="16" x2="6" y2="9" />
+            <line x1="16" y1="16" x2="26" y2="9" />
+            <line x1="16" y1="16" x2="6" y2="23" />
+            <line x1="16" y1="16" x2="26" y2="23" />
+            <line x1="16" y1="16" x2="16" y2="4" />
+          </g>
+          <circle cx="16" cy="16" r="3.4" fill="var(--accent)" />
+          <circle cx="6" cy="9" r="2" fill="currentColor" opacity="0.6" />
+          <circle cx="26" cy="9" r="2" fill="currentColor" opacity="0.6" />
+          <circle cx="6" cy="23" r="2" fill="currentColor" opacity="0.6" />
+          <circle cx="26" cy="23" r="2" fill="currentColor" opacity="0.6" />
+          <circle cx="16" cy="4" r="2" fill="currentColor" opacity="0.6" />
+        </svg>
+        <span class="brand-name">Cluster</span>
+      </div>
+      <div class="agent-count" id="agentCount">13 agents ready</div>
+    </header>
+
+    <main class="chat" id="chat" role="log" aria-live="polite">
+      <div class="empty-state" id="emptyState">
+        <p>Ask me anything — the cluster picks the right specialists for it.</p>
+      </div>
+    </main>
+
+    <div class="cluster-strip" aria-live="polite">
+      <div class="nodes" id="nodes"></div>
+      <div class="status" id="status">Idle</div>
+    </div>
+
+    <form class="composer" id="composer">
+      <input type="text" id="input" placeholder="Message Cluster…" autocomplete="off" />
+      <button type="submit" id="sendBtn">Send</button>
+    </form>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
